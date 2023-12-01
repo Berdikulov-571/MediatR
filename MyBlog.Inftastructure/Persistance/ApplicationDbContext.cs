@@ -9,16 +9,16 @@ namespace MyBlog.Inftastructure.Persistance
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
         {
-            
+
         }
 
         public DbSet<Post> Posts { get; set; }
 
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {
-            base.OnModelCreating(modelBuilder);
+        //protected override void OnModelCreating(ModelBuilder modelBuilder)
+        //{
+        //    base.OnModelCreating(modelBuilder);
 
-            modelBuilder.ApplyConfiguration(new PostEntityTypeConfiguration());
-        }
+        //    modelBuilder.ApplyConfiguration(new PostEntityTypeConfiguration());
+        //}
     }
 }
